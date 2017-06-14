@@ -1,6 +1,6 @@
 # Semantify simple node upload example
 
-This file shows how to upload JSON-LD annotations to semantify using the API.
+This file shows how to upload JSON-LD annotations to [semantify.it](https://semantify.it) using the API.
 
 ## Steps
 1. Make an account on [semantify.it](https://semantify.it).
