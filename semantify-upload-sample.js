@@ -4,8 +4,10 @@ start();
 
 function start() {
 
-    var apiKey = "HyFuBrueW"; //YOUR API KEY HERE
-    var url = "https://semantify.it/api/annotation/" + apiKey;
+    var websiteUID = "HyFuBrueW"; //YOUR WEBSITE-UID HERE
+    var websiteSecret = "myWebsiteSecret"; //YOUR WEBSITE-SECRET HERE
+
+    var url = "https://semantify.it/api/annotation/" + websiteUID;
 
     //preparing dummy annotation
     var annotation = {};
@@ -37,6 +39,9 @@ function start() {
     request({
         url: url,
         method: "POST",
+        headers: {
+            "website-secret": websiteSecret
+        },
         json: bulk
     }, function(error, response, body) {
         if (!error && response.statusCode === 200) {
